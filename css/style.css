@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Pacifico&display=swap');
+
+:root{
+    /*color pattern*/
+    --default-black: #222831;
+    --light-black: #393e46;
+    --default-blue: #00adb5;
+    --default-white: #eeeeee;
+
+    /*font pattern*/
+    --default-text: 'Montserrat', sans-serif;
+    --title-text: 'Pacifico', cursive;
+}
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: var(--default-text);
+}
+
+/*logo*/
+
+.logo{
+    font-style: var(--title-text);
+    color: var(--default-white);
+    font-size: 1.2em;
+}
+
+.logo i:nth-child(odd){
+    color: var(--default-blue);
+    font-size: 1.3em;
+}
+
+.btn{
+
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: 1px solid;
+    border-radius: 20px;
+    transition: all 300ms ease-in;
+}
+
+.btn-primary{
+    background: var(--default-blue);
+    color: var(--default-white);
+}
+
+.btn-primary:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    background-blend-mode: multiply;
+}
+
+.container{
+    min-height: 100vh;
+    width: 100%;
+    padding: 50px 20px;
+}
+
+article{
+    padding: 20px;
+}
+
+article h1{
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+article p{
+    margin-bottom: 10px;
+    line-height: 1.3em;
+}
+
+/*-----------*/
+
+/*navbar*/
+
+nav{
+    width: 100%;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    background: rgb(34, 40, 49, 0.5);
+}
+
+.navbar__menu{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar__menu li a{
+    text-decoration: none;
+    color: var(--default-white);
+    margin-right: 20px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.navbar__menu li:nth-last-child(1){
+    margin-right: 0;
+}
+
+.navbar__menu li a:hover{
+    color: var(--default-blue);
+}
+
+/*-----------*/
+
+/*main*/
+
+main{
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px 20px;
+    background: url("https://images.pexels.com/photos/1076130/pexels-photo-1076130.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") fixed center/cover;
+    background-color: rgba(0, 173, 181, 0.5);
+    background-blend-mode: multiply;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+
+main .main__title{
+    transform: rotate(-25deg);
+    position: relative;
+    color: var(--default-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main .main__title p{
+    font-size: .5em;
+}
+
+main .main__title h2{
+    font-family: var(--title-text);
+    font-size: 5em;
+    line-height: 1em;
+    color: rgba(238, 238, 238, 0.9);
+}
+
+/*-----------------------*/
+
+/*info*/
+
+#info__section{
+    background-color: var(--light-black);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+#info__section .img-profile{
+    background: url("https://images.pexels.com/photos/2832034/pexels-photo-2832034.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") center center/cover;
+    flex-grow: 1;
+    height: 40vh;
+}
+
+#info__section article h1{
+    color: var(--default-blue);
+}
+
+#info__section article p{
+    color: var(--default-white);
+}
+
+/*--------------------*/
+
+/*opinion*/
+
+#opinion__section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#opinion__section article:nth-child(1){
+    flex-grow: 1;
+    width: 100%;
+}
+
+#opinion__section .group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 1.3rem 0;
+    border: 1px solid var(--default-black);
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+#opinion__section .group:nth-child(odd){
+    background: rgba(150, 150, 150, 0.2);
+}
+
+#opinion__section .group .profile-photo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 6rem;
+}
+
+#opinion__section .group .profile-photo img{
+    height: 6rem;
+}
+
+#opinion__section .group span{
+    font-size: 1.5em;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+#opinion__section .group p{
+    color: var(--default-black);
+    line-height: 1.3em;
+    text-align: center;
+}
+
+/*------------*/
+
+/*footer*/
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    background-color: var(--default-black);
+}
+
+footer p{
+    color: var(--default-white);
+    font-family: var(--title-text);
+    font-size: 1.3em;
+    line-height: 1em;
+}
+
+footer span{
+    color: var(--default-white);
+    cursor: pointer;
+}
+
+footer .credits{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+    padding-top: 5px;
+}
+
+footer .credits small{
+    color: var(--default-blue);
+    font-size: 0.8em;
+}
+
+footer .credits small a{
+    text-decoration: none;
+    font-weight: bolder;
+    color: var(--default-white);
+    font-size: 0.8em;
+}
+
+
+
+
+
+@media(min-width:600px){
+    #info__section{
+        flex-direction: row;
+    }
+
+    #info__section .img-profile{
+        width: 100%;
+        height: auto;
+    }
+
+    #opinion__section{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    #opinion__section .group{
+        max-width: 500px;
+    }
+
+    
+}
